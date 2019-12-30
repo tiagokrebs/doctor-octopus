@@ -46,7 +46,7 @@ tasks:
 ```
 Note that `search_root` make reference to doctor_octopus installed source. This is normally found in `.../lib/python3.7/site-packages/doctor-octopus`.
 If you want to learn mobe about fabric configuration see [here](http://docs.fabfile.org/en/2.5/concepts/configuration.html). 
-Another alternative is point to your development source folder.
+Another alternative is to point this at your development source folder.
 
 ## Contributing
 
@@ -61,7 +61,7 @@ pip install -r requirements.txt
 Make your branch and submit a PR.
 
 ## Base Projects
-Doctor octopus is fundamentally based but not limited to these three open source projects:
+This project is fundamentally based but not limited to these three open source projects:
 - [Fabric](https://github.com/fabric/fabric/) A library designed to execute shell commands remotely over SSH.
 - [Invoke](https://github.com/pyinvoke/invoke/) A task execution tool & library.
 - [Paramiko](https://github.com/paramiko/paramiko/) A implementation of the SSHv2 protocol.
