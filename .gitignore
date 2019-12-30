@@ -3,3 +3,4 @@ dist
 .idea
 octo.egg-info
 env
+mytasks

@@ -17,25 +17,28 @@ Instead of only four arms he can use how many you like. Also he already has know
 
 ## Usage
 Loading...
-```
-octo --help
-octo --list
-octo --help task
-octo task
-octo task --param 0
-octo namespace.task
+```console
+$ octo --help
+$ octo --list
+$ octo --help task
+$ octo task
+$ octo task --param 0
+$ octo namespace.task
+$ octo aws-configure
+$ octo get-infra
+$ octo -H app-orf-aws001s.infra.azion.net ls --dir /tmp
 ```
 
 ## Instalation
 For obvious reasons Doctor Octopus it's not a PyPI oficial package so you need to install directly from our Github.
-```
-pip install git+ssh://git@github.com/tiagorkrebs/doctor-octopus.git
+```console
+$ pip install git+ssh://git@github.com/tiagorkrebs/doctor-octopus.git
 ```
 Make sure that you have an authorized private key for this.
 
 ## Configuration
 Create a `~/.fabric.yaml` with this basic configuration
-```
+```yaml
 debug: true
 run:
     echo: true
@@ -43,20 +46,27 @@ tasks:
   auto_dash_names: true
   collection_name: tasks
   search_root: /usr/local/lib/python3.7/site-packages/doctor-octopus
+user: <Your username>
+connect_kwargs:
+  key_filename: <Absolute path to your private key>
+  passphrase: <Passphrase of your private key>
 ```
 Note that `search_root` make reference to doctor_octopus installed source. This is normally found in `.../lib/python3.7/site-packages/doctor-octopus`.
 If you want to learn mobe about fabric configuration see [here](http://docs.fabfile.org/en/2.5/concepts/configuration.html). 
 Another alternative is to point this at your development source folder.
 
+If you have permission to connect on Azion's servers over SSH your public key will be published over our network.
+This type of connection only works when this key is used.
+
 ## Contributing
 
 Clone this repository and install all requirements.
-```
-git clone git@github.com:tiagorkrebs/doctor-octopus.git
-cd doctor-octopus
-virtualenv -p python3 env
-source env/bin/activate
-pip install -r requirements.txt
+```console
+$ git clone git@github.com:tiagorkrebs/doctor-octopus.git
+$ cd doctor-octopus
+$ virtualenv -p python3 env
+$ source env/bin/activate
+$ pip install -r requirements.txt
 ```
 Make your branch and submit a PR.
 

@@ -1,6 +1,7 @@
 import os
 import json
 import re
+from fabric import task
 
 
 def get_record_sets_names(app=None, env=None, loc=None, pop=None):
@@ -20,15 +21,13 @@ def get_record_sets_names(app=None, env=None, loc=None, pop=None):
     return names
 
 
-def aws_configure():
+@task(name='infra',
+      help={'app': "App name (edg|app|foo)", 'env': "Canary(c), Dev(d), Prod(p), Stage(s)",
+            'loc': "Airport (poa|mia|foo)", 'pop': "Datacenter (ovh|aws|foo)"})
+def infra(c, app=None, env=None, loc=None, pop=None):
     """
-    Starts awscli configuration
-    :return: True
+    Obtém lista de servidores da zona .infra.azion.net
     """
-    os.system('aws configure')
-    return
-
-
-if __name__ == "__main__":
-    aws_configure()
-    print(get_record_sets_names('api'))
+    rsets = get_record_sets_names(app, env, loc, pop)
+    for r in rsets:
+        print(r)
