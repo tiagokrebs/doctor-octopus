@@ -3,6 +3,3 @@ dist
 .idea
 octo.egg-info
 env
-
-doctor-octopus/fabfile/
-doctor-octopus/generic/
