@@ -1,3 +1,4 @@
+import traceback
 from fabric import task
 from fabric import Connection
 from ..aws.route53 import get_record_sets_names
@@ -12,7 +13,10 @@ def exec(c, cmd, app=None, env=None, loc=None, pop=None):
     """
     if 'host' in c:
         print('\n*** ' + c.host + ' ***')
-        c.run("{}".format(cmd))
+        try:
+            c.run("{}".format(cmd))
+        except Exception as e:
+            print(traceback.format_exc())
     else:
         if all(v is None for v in {app, env, loc, pop}):
             print('Expected one or combination of: --app|a, --env|-e, --loc|-l, --pop|-p, --host|-H')
@@ -22,4 +26,8 @@ def exec(c, cmd, app=None, env=None, loc=None, pop=None):
             for h in hosts:
                 with Connection(host=h) as con:
                     print('\n*** ' + h + ' ***')
-                    con.run("{}".format(cmd))
+                    try:
+                        con.run("{}".format(cmd))
+                    except Exception as e:
+                        print(traceback.format_exc())
+
