@@ -4,7 +4,7 @@ from fabric import task
 
 def aws_configure():
     """
-    Starts awscli configuration
+    Start aws configuration
     :return: True
     """
     os.system('aws configure')
@@ -14,7 +14,6 @@ def aws_configure():
 @task(name='configure')
 def configure(c):
     """
-    Efetua configuração do aws cli (obirgatótio)
+    Starts AWS Client configurarion (mandatory)
     """
-    print("Informe suas credenciais AWS")
     aws_configure()
