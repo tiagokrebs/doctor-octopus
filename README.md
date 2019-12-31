@@ -49,11 +49,11 @@ If you have permission to connect on Azion's servers over SSH your public key wi
 This type of connection only works when this key is used.
 
 ## Usage
-`doctor U octopus = octo`
+**`doctor U octopus = octo`**
 
 The `octo` command is based on `fab` and `invoke` tools so all functions of them are available.
 
-For a complete help out octo
+For a complete help
 ```console
 $ octo -h
 ```
