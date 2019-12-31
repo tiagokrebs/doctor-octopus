@@ -88,7 +88,7 @@ is possible by using `-H|--host` parameter
 $ octo exec --cmd "ls -la /tmp" --app app --env s
 
 # this will run only on app-orf-aws001s host
-$ ocro exec --cmd "ls -la /tmp" -H app-orf-aws001s
+$ octo exec --cmd "ls -la /tmp" -H app-orf-aws001s
 ```
 
 ## Private Tasks
