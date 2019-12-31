@@ -43,7 +43,7 @@ Note that `search_root` make reference to doctor_octopus installed source. This 
 `.../lib/python3.7/site-packages/doctor-octopus`.
 If you want to learn more about fabric configuration see [here](http://docs.fabfile.org/en/2.5/concepts/configuration.html). 
 Another alternative is to point this at your development source folder. 
-Just make sure to point at `doctor-cotopus` root project folder.
+Just make sure to point at `doctor-cotopus` root.
 
 If you have permission to connect on Azion's servers over SSH your public key will be published over our network.
 This type of connection only works when this key is used.
