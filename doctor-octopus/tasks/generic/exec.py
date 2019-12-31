@@ -10,7 +10,6 @@ def exec(c, cmd, app=None, env=None, loc=None, pop=None):
     """
     Run one line command on remote server
     """
-    print(c)
     if 'host' in c:
         print('\n*** ' + c.host + ' ***')
         c.run("{}".format(cmd))
