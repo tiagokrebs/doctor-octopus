@@ -43,17 +43,17 @@ Note that `search_root` make reference to doctor_octopus installed source. This 
 `.../lib/python3.7/site-packages/doctor-octopus`.
 If you want to learn more about fabric configuration see [here](http://docs.fabfile.org/en/2.5/concepts/configuration.html). 
 Another alternative is to point this at your development source folder. 
-Just make sure to point at `doctor-cotopus` root project folder.
+Just make sure to point at `doctor-cotopus` root.
 
 If you have permission to connect on Azion's servers over SSH your public key will be published over our network.
 This type of connection only works when this key is used.
 
 ## Usage
-`doctor U octopus = octo`
+**`doctor U octopus = octo`**
 
 The `octo` command is based on `fab` and `invoke` tools so all functions of them are available.
 
-For a complete help out octo
+For a complete help
 ```console
 $ octo -h
 ```
@@ -88,7 +88,7 @@ is possible by using `-H|--host` parameter
 $ octo exec --cmd "ls -la /tmp" --app app --env s
 
 # this will run only on app-orf-aws001s host
-$ ocro exec --cmd "ls -la /tmp" -H app-orf-aws001s
+$ octo exec --cmd "ls -la /tmp" -H app-orf-aws001s
 ```
 
 ## Private Tasks
