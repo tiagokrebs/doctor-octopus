@@ -91,6 +91,17 @@ $ octo exec --cmd "ls -la /tmp" --app app --env s
 $ octo exec --cmd "ls -la /tmp" -H app-orf-aws001s
 ```
 
+### PRO Tip
+Use the `time` command to check how much time octo has saved you.
+```console
+$ time octo exec --cmd "ls -la /tmp" --app app --env s
+...
+
+real    0m7.860s
+user    0m1.645s
+sys     0m0.456s
+``` 
+
 ## Private Tasks
 If you want to create and use your own obscure and private tasks you will need to run at a development environment.
 See **Contributing** and install the package locally with pip.
