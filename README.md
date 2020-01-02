@@ -103,7 +103,7 @@ sys     0m0.456s
 ``` 
 
 ## Private Tasks
-If you want to create and use your own obscure and private tasks you will need to run at a development environment.
+If you want to use your own obscure and private tasks you will need to run at a development environment.
 See **Contributing** and install the package locally with pip.
 ```console
 $ pip install -e .
