@@ -92,7 +92,7 @@ $ octo exec --cmd "ls -la /tmp" -H app-orf-aws001s
 ```
 
 ### PRO Tip
-Use the `time` command to check how much time octo has saved you.
+Use `time` command to check how much time octo has saved you.
 ```console
 $ time octo exec --cmd "ls -la /tmp" --app app --env s
 ...
