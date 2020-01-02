@@ -106,7 +106,7 @@ sys     0m0.456s
 If you want to create and use your own obscure and private tasks you will need to run at a development environment.
 See **Contributing** and install the package locally with pip.
 ```console
-$ pip insytall -e .
+$ pip install -e .
 ```
 
 Add a `mytasks` module inside `doctor-octopus/tasks/`.
