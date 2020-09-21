@@ -1,0 +1,22 @@
+para uso de aws com MFA
+
+# autentica com app
+# considerar utilizacao de --duration-seconds para menor tempo de expire
+aws sts get-session-token --serial-number arn:aws:iam::083054810114:mfa/tiago.krebs --token-code 046395
+retorno:
+{
+    "Credentials": {
+        "AccessKeyId": "ASIARGVTT2QBIQMU7AXN",
+        "SecretAccessKey": "gZIjroi1zwV6PWjGmwGOwN9orcPyIaQbVmg790YH",
+        "SessionToken": "FwoGZXIvYXdzEAUaDClxE92YLhT3+JVXQyKGAfb9ucVa8vEW1ketTYrFDquZw/2TvLuSJ5zBl2xYQ+63ptP7wKY5AEOfaUQrzOvW1s03YT2mpnPX3xyNXJgvdMPvdb98UlrloKaNU9R4DCmM0gqNhabWQeTTvEHbb4d2Vdps2Ppx0MaBIvQ+jo/R3TcieNKNo/h5IAAvcZeV43sSwXhZ8E2eKIbtmvoFMijOem1e0yokk50HO1sGLZQHUnQQk1gChFogi0cbKBvRuhE3dQt02dWE",
+        "Expiration": "2020-08-27T07:22:46Z"
+    }
+}
+
+# eporta variaveis
+export AWS_ACCESS_KEY_ID=ASIARGVTT2QBIQMU7AXN
+export AWS_SECRET_ACCESS_KEY=gZIjroi1zwV6PWjGmwGOwN9orcPyIaQbVmg790YH
+export AWS_SESSION_TOKEN=FwoGZXIvYXdzEAUaDClxE92YLhT3+JVXQyKGAfb9ucVa8vEW1ketTYrFDquZw/2TvLuSJ5zBl2xYQ+63ptP7wKY5AEOfaUQrzOvW1s03YT2mpnPX3xyNXJgvdMPvdb98UlrloKaNU9R4DCmM0gqNhabWQeTTvEHbb4d2Vdps2Ppx0MaBIvQ+jo/R3TcieNKNo/h5IAAvcZeV43sSwXhZ8E2eKIbtmvoFMijOem1e0yokk50HO1sGLZQHUnQQk1gChFogi0cbKBvRuhE3dQt02dWE
+
+# executa comando
+octo get-infra --app edg --env p
